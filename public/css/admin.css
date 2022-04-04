@@ -1,0 +1,37 @@
+
+#dashboard .dashboard-header {
+  margin: 0;
+  background-color: #f75d5c;
+}
+
+.dashboard-item .action-icon {
+  background-color: #fff;
+  color: #f75d5c;
+}
+
+#header_img-container {
+  position: relative;
+}
+
+#header_img-container img {
+  height: 250px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+#header_img-container #remove_img {
+  position: absolute;
+  display: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0.7;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+#login_section,
+#signup_section {
+
+  margin: 2rem;
+}

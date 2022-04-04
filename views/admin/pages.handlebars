@@ -1,0 +1,28 @@
+{{>_admin_header}}
+
+
+<div class="py-3">
+    <table class="table table-responsive">
+        <thead>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Date</th>
+        </thead>
+        <tbody>
+            {{#each pages}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{status}}</td>
+                <td>{{dateString date}}</td>
+                <td>
+                    <div class="d-flex">
+                        <span class="pr-2"><a href="/pages/edit/{{_id}}"
+                                class="btn-sm btn-success no_underline">Edit</a></span>
+                        <span><a href="/pages/delete/{{_id}}" class="btn-sm btn-danger no_underline">Delete</a></span>
+                    </div>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

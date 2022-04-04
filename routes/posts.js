@@ -1,0 +1,39 @@
+const express = require('express');
+
+const postController = require('../controllers/posts');
+
+const {
+  ensureAuthenticated
+} = require('../helpers/auth');
+
+const router = express.Router();
+
+const multer = require('multer');
+
+const storage = multer.memoryStorage();
+const upload = multer({
+  storage: storage
+});
+
+router.get('/add', ensureAuthenticated, postController.getAddPost);
+
+router.get('/edit/:id', ensureAuthenticated, postController.getEditPost);
+
+router.get('/delete/:id', ensureAuthenticated, postController.getDeletePost);
+
+router.get('/show/:id', postController.getShowPost);
+
+router.post('/', ensureAuthenticated, upload.single('header_img'), postController.postAddNewPost);
+
+
+router.put('/:id', ensureAuthenticated, upload.single('header_img'), postController.putUpdatePost);
+
+router.delete('/:id', ensureAuthenticated, postController.deleteSinglePost);
+
+router.get('/', postController.getPostsByCategory);
+
+router.post('/comment/:id', postController.postComment);
+
+router.delete('/comment/:id', ensureAuthenticated, postController.deleteComment);
+
+module.exports = router;
