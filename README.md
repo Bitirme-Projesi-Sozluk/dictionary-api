@@ -5,4 +5,5 @@
 # 1) 'npm install'
 # 2) 'node app'
 
+# localhost:5200 de çalışıyor
 
