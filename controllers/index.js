@@ -10,7 +10,6 @@ exports.getIndex = (req, res, next) => {
     .sort('-date')
     .lean()
     .then((posts) => {
-      console.log(posts);
       res.render('index/index', {
         'posts': posts
       });

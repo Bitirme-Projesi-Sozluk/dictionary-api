@@ -15,8 +15,6 @@ exports.getAddPost = (req, res) => {
 exports.getEditPost = (req, res) => {
   Post.findById(req.params.id)
     .then((data) => {
-      console.log(data);
-      // handlebars issue
       const post = data.toObject();
       res.render('post/edit', {
         post
@@ -43,7 +41,6 @@ exports.getDeletePost = (req, res) => {
 };
 
 exports.getShowPost = (req, res) => {
-  console.log(1)
   Post.findById(req.params.id)
     .then((data) => {
       const post = data.toObject();
@@ -77,11 +74,6 @@ exports.postAddNewPost = async (req, res) => {
     console.log(err);
     res.status(500).send();
   }
-  // if (!image) {
-  //   imageUrl = 'images/not-found.jpg';
-  // } else {
-  //   imageUrl = image.path.replace(/\\/g, '/');
-  // }
 
   const post = new Post({
     'title': req.body.title,
@@ -163,9 +155,9 @@ exports.putUpdatePost = async (req, res) => {
 exports.getPostsByCategory = (req, res) => {
   console.log(req.query.category);
   Post.find({
-      status: 'published',
-      category: req.query.category
-    })
+    status: 'published',
+    category: req.query.category
+  })
     .sort('-date')
     // handlebars issue
     .lean()
@@ -211,16 +203,16 @@ exports.postComment = (req, res) => {
     }
   }
   Post.findOneAndUpdate({
-      _id: req.params.id,
-      allowComments: true
-    }, {
-      $push: {
-        comments: {
-          $each: [newComment],
-          $position: 0
-        }
+    _id: req.params.id,
+    allowComments: true
+  }, {
+    $push: {
+      comments: {
+        $each: [newComment],
+        $position: 0
       }
-    })
+    }
+  })
     .then((post) => {
       res.redirect(`/posts/show/${post.id}`);
     })
@@ -232,14 +224,14 @@ exports.postComment = (req, res) => {
 
 exports.deleteComment = (req, res) => {
   Post.findOneAndUpdate({
-      _id: req.params.id
-    }, {
-      $pull: {
-        comments: {
-          _id: req.query.c_id
-        }
+    _id: req.params.id
+  }, {
+    $pull: {
+      comments: {
+        _id: req.query.c_id
       }
-    })
+    }
+  })
     .then((post) => {
       res.redirect(`/posts/show/${post.id}`);
     })
