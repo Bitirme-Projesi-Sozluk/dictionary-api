@@ -121,7 +121,6 @@ exports.putUpdatePost = async (req, res) => {
       post.allowComments = allowComments;
 
       if (image) {
-        // fileHelper.deleteImage(post.images.imageUrl);
         cloudinaryUpload(image)
           .then((result) => {
             console.log(result);

@@ -45,7 +45,6 @@ mongoose.connect(mongodb_uri, {
     console.log(`Error Mongo: ${e.message}`);
   });
 
-// Supress the deprication warning for FindAndModify
 mongoose.set('useFindAndModify', false);
 
 cloudinary.config({
