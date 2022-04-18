@@ -34,8 +34,8 @@ exports.getSignUp = (req, res) => {
 
 exports.postSignUp = (req, res) => {
   Admin.findOne({
-      'username': req.body.username
-    })
+    'username': req.body.username
+  })
     .then(user => {
       if (user) {
         res.status(409).send('User already exists');
