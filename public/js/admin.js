@@ -76,7 +76,7 @@ function previewImage() {
       removeImg.style.display = "block";
       const imageWidth = image.clientWidth;
       let removeImgWidth = removeImg.clientWidth - Number.parseFloat(removeImg.style.paddingLeft) - Number.parseFloat(removeImg.style.paddingRight);
-      removeImg.style.padding = `0 ${imageWidth/2 - removeImgWidth/2}px`;
+      removeImg.style.padding = `0 ${imageWidth / 2 - removeImgWidth / 2}px`;
     }
   });
   // Event MouseLeave

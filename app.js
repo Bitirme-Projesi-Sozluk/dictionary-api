@@ -15,24 +15,6 @@ const mongodb_uri = 'mongodb+srv://admin:123@maltepe.jrn5a.mongodb.net/myFirstDa
 const cloudinary = require('cloudinary');
 const cloudinaryConfig = require('./config/cloudinary');
 
-// Multer Configuration 
-const fileStorage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'images');
-  },
-  filename: (req, file, cb) => {
-    cb(null, new Date().toDateString().replace(/:/g, '-') + '-' + file.originalname);
-  }
-});
-
-const fileFilter = (req, file, cb) => {
-  if (file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg') {
-    cb(null, true);
-  } else {
-    cb(null, false);
-  }
-};
-
 mongoose.connect(mongodb_uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -54,7 +36,7 @@ cloudinary.config({
 });
 
 // import routes
-const index = require('./routes/index');
+const index = require('./routes/posts');
 const posts = require('./routes/posts');
 const admin = require('./routes/admin');
 
@@ -65,8 +47,9 @@ app.use(express.static(__dirname + '/public'));
 app.use('/images', express.static(__dirname + '/images'));
 
 // View Engine
-app.engine('handlebars', exphbs({
+app.engine('.hbs', exphbs({
   defaultLayout: 'main',
+  extname: '.hbs',
   helpers: {
     dateString: hbs.dateString,
     getDate: hbs.getDate,
@@ -74,7 +57,7 @@ app.engine('handlebars', exphbs({
     toBase64: hbs.toBase64
   }
 }));
-app.set('view engine', 'handlebars');
+app.set('view engine', 'hbs');
 
 // MethodOverride
 app.use(methodOverride('_method'));
