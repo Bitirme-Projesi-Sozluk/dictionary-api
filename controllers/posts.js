@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const fileHelper = require('../util/fileHelper');
 // import Post model
 require('../model/Post');
 const Post = mongoose.model('posts');
