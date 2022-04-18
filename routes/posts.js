@@ -15,6 +15,8 @@ const upload = multer({
   storage: storage
 });
 
+router.get('/', postController.getIndex);
+
 router.get('/add', ensureAuthenticated, postController.getAddPost);
 
 router.get('/edit/:id', ensureAuthenticated, postController.getEditPost);

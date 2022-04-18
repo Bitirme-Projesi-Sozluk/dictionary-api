@@ -37,33 +37,7 @@ exports.postSignUp = (req, res) => {
     'username': req.body.username
   })
     .then(user => {
-      if (user) {
-        res.status(409).send('User already exists');
-      } else {
-        const newUser = new Admin({
-          'username': req.body.username,
-          'password': req.body.password
-        });
-        const saltRounds = 10;
-        bcrypt.hash(newUser.password, saltRounds)
-          .then(hash => {
-            newUser.password = hash;
-          })
-          .then(() => {
-            newUser.save()
-              .then(user => {
-                console.log(`AdminUser: ${user}`);
-                res.redirect('/admin/login');
-              })
-              .catch(err => {
-                console.log(err);
-                res.sendStatus(500);
-              });
-          })
-          .catch(err => {
-            console.log(`Error: ${err}`);
-          });
-      }
+      res.status(409).send('User already exists');
     })
     .catch((err) => {
       console.log(`Error: ${err.message} - admin.js`);

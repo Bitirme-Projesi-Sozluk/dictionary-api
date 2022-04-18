@@ -4,9 +4,23 @@ const fileHelper = require('../util/fileHelper');
 require('../model/Post');
 const Post = mongoose.model('posts');
 
-const {
-  cloudinaryUpload
-} = require('../util/imageUpload');
+
+exports.getIndex = (req, res, next) => {
+  Post.find({
+    status: 'published'
+  })
+    .sort('-date')
+    .lean()
+    .then((posts) => {
+      res.render('index', {
+        'posts': posts
+      });
+    })
+    .catch((err) => {
+      res.status(404);
+    })
+};
+
 
 exports.getAddPost = (req, res) => {
   res.render('post/add');
@@ -50,7 +64,7 @@ exports.getShowPost = (req, res) => {
     })
     .catch((err) => {
       console.log(`Error1: ${err.message}`);
-      res.status(500).send();
+      res.status(404).render('post/404');
     });
 };
 
@@ -60,11 +74,8 @@ exports.postAddNewPost = async (req, res) => {
   if (req.body.allowComments == 'on') {
     allowComments = true;
   }
-  // const allowTypes = ['image/jpeg', 'image/png'];
-
   const image = req.file;
   let imageUrl;
-
   try {
 
     const uploadResult = await cloudinaryUpload(image);
@@ -72,15 +83,12 @@ exports.postAddNewPost = async (req, res) => {
     imageUrl = uploadResult.secure_url ? uploadResult.secure_url : '';
   } catch (err) {
     console.log(err);
-    res.status(500).send();
+    res.status(500).redirect('/admin');
   }
 
   const post = new Post({
     'title': req.body.title,
     'body': req.body.body,
-    'images': {
-      'imageUrl': imageUrl
-    },
     'category': req.body.category ? req.body.category.toLowerCase() : 'ALL',
     'status': req.body.status,
     'allowComments': allowComments
@@ -89,7 +97,6 @@ exports.postAddNewPost = async (req, res) => {
   post
     .save()
     .then((doc) => {
-      console.log(doc);
       res.redirect('/admin/posts');
     })
     .catch((err) => {
@@ -161,7 +168,6 @@ exports.getPostsByCategory = (req, res) => {
     // handlebars issue
     .lean()
     .then((posts) => {
-      console.log(posts);
       res.render('post/category', {
         'posts': posts
       });

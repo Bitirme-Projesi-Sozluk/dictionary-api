@@ -76,7 +76,7 @@ function previewImage() {
       removeImg.style.display = "block";
       const imageWidth = image.clientWidth;
       let removeImgWidth = removeImg.clientWidth - Number.parseFloat(removeImg.style.paddingLeft) - Number.parseFloat(removeImg.style.paddingRight);
-      removeImg.style.padding = `0 ${imageWidth/2 - removeImgWidth/2}px`;
+      removeImg.style.padding = `0 ${imageWidth / 2 - removeImgWidth / 2}px`;
     }
   });
   // Event MouseLeave
@@ -106,3 +106,15 @@ function removeImage(e) {
   document.getElementById('header_img').setAttribute('src', "");
   imgContainer.classList.add('d-none');
 }
+
+//Main.js Navbar için
+
+$(document).ready(() => {
+  //For navbar
+  $('ul.navbar-nav li.active').removeClass('active');
+  $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active');
+
+  //For nav tabs
+  $('.nav-tabs a.active').removeClass('active');
+  $('a[href="' + this.location.pathname + '"]').addClass('active')
+});
