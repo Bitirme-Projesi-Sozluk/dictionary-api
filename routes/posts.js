@@ -35,6 +35,9 @@ router.delete('/:id', ensureAuthenticated, postController.deleteSinglePost);
 
 router.get('/bolum', postController.getBolum);
 router.get('/universite', postController.getTest);
+router.get('/myo', postController.getMYO);
+router.get('/fakulte', postController.getFakulte);
+router.get('/konservatuvar',postController.getKonservatuvar);
 
 router.post('/comment/:id', postController.postComment);
 

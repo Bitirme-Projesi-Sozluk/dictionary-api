@@ -176,6 +176,62 @@ exports.getBolum = (req, res) => {
     })
 };
 
+exports.getMYO = (req, res) => {
+  Post.find({
+    status: 'published',
+    category: 'MYO'
+  })
+    .sort('-date')
+    .lean()
+    .then((posts) => {
+      res.render('post/myo', {
+        'posts': posts
+      });
+      console.log()
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(404).send();
+    })
+};
+
+exports.getFakulte = (req, res) => {
+  Post.find({
+    status: 'published',
+    category: 'Fakulte'
+  })
+    .sort('-date')
+    .lean()
+    .then((posts) => {
+      res.render('post/fakulte', {
+        'posts': posts
+      });
+      console.log()
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(404).send();
+    })
+};
+
+exports.getKonservatuvar = (req, res) => {
+  Post.find({
+    status: 'published',
+    category: 'Konservatuvar'
+  })
+    .sort('-date')
+    .lean()
+    .then((posts) => {
+      res.render('post/konservatuvar', {
+        'posts': posts
+      });
+      console.log()
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(404).send();
+    })
+};
 exports.getTest = (req, res) => {
   Post.find({
     status: 'published',
