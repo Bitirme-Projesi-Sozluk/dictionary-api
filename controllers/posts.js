@@ -183,7 +183,7 @@ exports.deleteSinglePost = (req, res) => {
   const postId = req.params.id;
   Post.findById(postId)
     .then(post => {
-    
+      // if (post.images.imageUrl !== 'images/not-found.jpg') {
       //   fileHelper.deleteImage(post.images.imageUrl);
       // }
       return Post.deleteOne({
