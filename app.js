@@ -12,9 +12,6 @@ const multer = require('multer');
 
 const mongodb_uri = 'mongodb+srv://admin:123@maltepe.jrn5a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
-const cloudinary = require('cloudinary');
-const cloudinaryConfig = require('./config/cloudinary');
-
 mongoose.connect(mongodb_uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -29,11 +26,6 @@ mongoose.connect(mongodb_uri, {
 
 mongoose.set('useFindAndModify', false);
 
-cloudinary.config({
-  cloud_name: cloudinaryConfig.cloud_name,
-  api_key: cloudinaryConfig.api_key,
-  api_secret: cloudinaryConfig.api_secret
-});
 
 // import routes
 const index = require('./routes/posts');

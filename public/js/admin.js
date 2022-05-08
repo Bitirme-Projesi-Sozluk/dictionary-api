@@ -106,3 +106,15 @@ function removeImage(e) {
   document.getElementById('header_img').setAttribute('src', "");
   imgContainer.classList.add('d-none');
 }
+
+//Main.js Navbar için
+
+$(document).ready(() => {
+  //For navbar
+  $('ul.navbar-nav li.active').removeClass('active');
+  $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active');
+
+  //For nav tabs
+  $('.nav-tabs a.active').removeClass('active');
+  $('a[href="' + this.location.pathname + '"]').addClass('active')
+});
