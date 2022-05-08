@@ -32,7 +32,8 @@ router.put('/:id', ensureAuthenticated, upload.single('header_img'), postControl
 
 router.delete('/:id', ensureAuthenticated, postController.deleteSinglePost);
 
-router.get('/', postController.getPostsByCategory);
+router.get('/bolum', postController.getBolum);
+router.get('/universite', postController.getTest);
 
 router.post('/comment/:id', postController.postComment);
 

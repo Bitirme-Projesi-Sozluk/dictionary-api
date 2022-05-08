@@ -157,20 +157,36 @@ exports.putUpdatePost = async (req, res) => {
     });
 };
 
-exports.getPostsByCategory = (req, res) => {
-  console.log(req.query.category);
+exports.getBolum = (req, res) => {
   Post.find({
     status: 'published',
-    category: req.query.category
+    category: 'bolum'
   })
     .sort('-date')
-    // handlebars issue
     .lean()
     .then((posts) => {
-      res.render('post/category', {
+      res.render('post/bolum', {
         'posts': posts
       });
       console.log()
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(404).send();
+    })
+};
+
+exports.getTest = (req, res) => {
+  Post.find({
+    status: 'published',
+    category: 'test'
+  })
+    .sort('-date')
+    .lean()
+    .then((posts) => {
+      res.render('post/universite', {
+        'posts': posts
+      });
     })
     .catch((err) => {
       console.log(err);
@@ -182,9 +198,7 @@ exports.deleteSinglePost = (req, res) => {
   const postId = req.params.id;
   Post.findById(postId)
     .then(post => {
-      // if (post.images.imageUrl !== 'images/not-found.jpg') {
-      //   fileHelper.deleteImage(post.images.imageUrl);
-      // }
+
       return Post.deleteOne({
         _id: postId
       });
