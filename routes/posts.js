@@ -16,6 +16,7 @@ const upload = multer({
 });
 
 router.get('/', postController.getIndex);
+router.get('posts ')
 
 router.get('/add', ensureAuthenticated, postController.getAddPost);
 
@@ -38,5 +39,4 @@ router.get('/universite', postController.getTest);
 router.post('/comment/:id', postController.postComment);
 
 router.delete('/comment/:id', ensureAuthenticated, postController.deleteComment);
-
 module.exports = router;
