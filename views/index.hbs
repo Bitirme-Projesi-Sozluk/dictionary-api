@@ -1,3 +1,4 @@
+<!-- 
 <div class="header_img">
   <div class="header_content text-center">
     <p>Maltepe Üniversitesi Bitirme Projesi 2</p>
@@ -33,3 +34,54 @@
     {{/each}}
   </div>
 </div>
+-->
+<div class='page-Content'>
+  <div class='element-Container'>
+    <div class='page-Categories'>
+      <div class='actions-Buttons'>
+        <a href='#' class='link-Button'>Massa vitae tortor</a>
+      </div>
+      <div class='list-Categories'>
+        <a href='#' class='item-Categories'>
+          <img src='/img/Begonia.png' class='icon-Categories' alt='#'>
+          <span class='label-Categories'>Feugiat in ante</span>
+        </a>
+        <a href='#' class='item-Categories'>
+          <img src='/img/Cherry-Blossom.png' class='icon-Categories' alt='#'>
+          <span class='label-Categories'>Velit euismod in</span>
+        </a>
+        <a href='#' class='item-Categories'>
+          <img src='/img/Clematis.png' class='icon-Categories' alt='#'>
+          <span class='label-Categories'>Ultrices in iaculis</span>
+        </a>
+        <a href='#' class='item-Categories'>
+          <img src='/img/Coriander.png' class='icon-Categories' alt='#'>
+          <span class='label-Categories'>Auctor augue mauris</span>
+        </a>
+        <a href='#' class='item-Categories'>
+          <img src='/img/Iris.png' class='icon-Categories' alt='#'>
+          <span class='label-Categories'>Donec ultrices tincidunt</span>
+        </a>
+        <a href='#' class='item-Categories'>
+          <img src='/img/Jade.png' class='icon-Categories' alt='#'>
+          <span class='label-Categories'>Odio pellentesque diam</span>
+        </a>
+      </div>
+    </div>
+    <div class='main-Content'>
+      <div class='content-Toolbar'></div>
+
+      <div class='list-Contents'>
+
+        {{#each posts}}
+        <a href="/posts/show/{{_id}}" class='item-Content'>
+          <h3 class='content-Header'>{{title}}</h3>
+          <span class='content-Category'><a href="/{{category}}">{{category}}</a></span>
+          <p class='content-Summary'>Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
+            pellentesque. Ultricies integer quis auctor elit sed vulputate mi. Odio tempor orci dapibus ultrices in
+            iaculis nunc sed. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
