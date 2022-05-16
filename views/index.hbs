@@ -39,6 +39,7 @@
   <div class='element-Container'>
     <div class='page-Categories'>
       <div class='actions-Buttons'>
+        <!-- -->
         <a href='#' class='link-Button'>Massa vitae tortor</a>
       </div>
       <div class='list-Categories'>
@@ -72,13 +73,13 @@
       <div class='content-Toolbar'></div>
 
       <div class='list-Contents'>
-
         {{#each posts}}
         <a href="/posts/show/{{_id}}" class='item-Content'>
           <h3 class='content-Header'>{{title}}</h3>
-          <span class='content-Category'><a href="/{{category}}">{{category}}</a></span>
+          <span class='content-Category'>{{category}}</span>
           <p class='content-Summary'>Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
-            pellentesque. Ultricies integer quis auctor elit sed vulputate mi. Odio tempor orci dapibus ultrices in
+            pellentesque. Ultricies integer quis auctor elit sed vulputate mi. Odio tempor orci dapibus
+            ultrices in
             iaculis nunc sed. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
         </a>
         {{/each}}
