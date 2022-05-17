@@ -98,7 +98,24 @@
 	background-color: var(--control-Colour);
 	border: 2px solid transparent;
 	border-radius: 10px;
+	position: relative;
 }
+
+/* .button-Control:after {
+	width: max-content;
+	content: attr(data-Bubble);
+	padding: 10px;
+	position: absolute;
+	background-color: var(--control-Colour);
+	color: var(--label-Colour);
+	border: 2px solid transparent;
+	font-size: 12px;
+	font-weight: 500;
+	border-radius: 10px;
+	left: 50%; top: 30px;
+	transform: translateX(-50%) translateY(100%);
+	visibility: hidden;
+} */
 
 .button-Control:hover {
 	background-color: var(--default-White);
@@ -108,6 +125,10 @@
 .button-Control:hover .icon-Control {
 	fill: var(--default-Colour);
 }
+
+/* .button-Control:hover:after {
+	visibility: visible;
+} */
 
 .button-Control:not(:last-child) {
 	margin-right: 5px;
