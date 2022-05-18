@@ -11,7 +11,6 @@
 }
 
 .page-Header {
-	margin-bottom: 20px;
 	border-bottom: 2px solid var(--control-Colour);
 	font-family: var(--additional-Font);
 	font-size: 15px;
@@ -123,6 +122,7 @@
 
 .page-Content {
 	font-family: var(--additional-Font);
+	margin-top: 20px;
 }
 
 .page-Categories {
