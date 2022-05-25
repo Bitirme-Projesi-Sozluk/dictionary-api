@@ -158,24 +158,7 @@ exports.putUpdatePost = async (req, res) => {
     });
 };
 
-exports.getBolum = (req, res) => {
-  Post.find({
-    status: 'published',
-    category: 'bolum'
-  })
-    .sort('-date')
-    .lean()
-    .then((posts) => {
-      res.render('post/bolum', {
-        'posts': posts
-      });
-      console.log()
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(404).send();
-    })
-};
+
 
 exports.getMYO = (req, res) => {
   Post.find({
