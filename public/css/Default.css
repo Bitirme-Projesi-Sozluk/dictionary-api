@@ -1,0 +1,226 @@
+@import url('Reset.css');
+@import url('Fonts.css');
+@import url('Roots.css');
+
+.page-Body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--default-White);
+    overflow: hidden;
+}
+
+.page-Header {
+	border-bottom: 2px solid var(--control-Colour);
+	font-family: var(--additional-Font);
+	font-size: 15px;
+}
+
+.element-Container {
+    display: flex;
+    width: 1040px;
+    margin: 0 auto;
+}
+
+.page-Headline {
+    margin-right: 20px;
+}
+
+.link-Headline {
+    display: block;
+	margin: 10px 0;
+}
+
+.image-Headline {
+    display: block;
+    height: 45px;
+    fill: var(--default-Colour);
+}
+
+.page-Links {
+    display: flex;
+    margin-right: 20px;
+    line-height: 65px;
+}
+
+.item-Links {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--label-Colour);
+}
+
+.item-Links:not(:last-child) {
+    margin-right: 15px;
+}
+
+.item-Links:hover {
+    color: var(--default-Colour);
+}
+
+.page-Controls {
+	display: flex;
+    flex-grow: 1;
+	margin: 10px 0;
+}
+
+.search-Form {
+	margin-right: 5px;
+	flex-grow: 1;
+}
+
+.search-Bar {
+	box-sizing: border-box;
+    width: 150px;
+    padding: 11.3px;
+    background-color: var(--control-Colour);
+    color: var(--label-Colour);
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+	float: right;
+}
+
+.search-Bar:focus {
+    width: 100%;
+    background-color: var(--default-White);
+    color: var(--default-Black);
+    border-color: var(--secondary-Colour);
+}
+
+.button-Control {
+	box-sizing: border-box;
+	height: 45px;
+	padding: 10px;
+	background-color: var(--control-Colour);
+	border: 2px solid transparent;
+	border-radius: 10px;
+	position: relative;
+}
+
+.button-Control:hover {
+	background-color: var(--default-White);
+    border-color: var(--secondary-Colour);
+}
+
+.button-Control:hover .icon-Control {
+	fill: var(--default-Colour);
+}
+
+.button-Control:not(:last-child) {
+	margin-right: 5px;
+}
+
+.icon-Control {
+	width: 18px;
+	fill: var(--label-Colour);
+}
+
+.page-Content {
+	font-family: var(--additional-Font);
+	margin-top: 20px;
+}
+
+.page-Categories {
+	display: block;
+	width: 200px;
+	flex-direction: column;
+	margin-right: 20px;
+}
+
+.actions-Buttons {
+	margin-bottom: 20px;
+}
+
+.link-Button {
+	display: block;
+	height: 45px;
+	box-sizing: border-box;
+	padding: 14px;
+	background-color: var(--default-Colour);
+	text-decoration: none;
+	color: var(--default-White);
+	font-size: 14px;
+	font-family: inherit;
+	font-weight: 500;
+	text-align: center;
+	border: 2px solid transparent;
+	border-radius: 10px;
+	outline: none;
+}
+
+.link-Button:hover {
+	background-color: var(--secondary-Colour);
+}
+
+.list-Categories {
+	display: flex;
+	flex-direction: column;
+}
+
+.item-Categories {
+	display: block;
+	text-decoration: none;
+	line-height: 45px;
+}
+
+.item-Categories:hover .label-Categories {
+	color: var(--default-Colour);
+}
+
+.icon-Categories {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.label-Categories {
+	color: var(--label-Colour);
+	font-size: 14px;
+	font-family: inherit;
+	font-weight: 500;
+}
+
+.main-Content {
+	flex: 1;
+}
+
+.content-Toolbar {
+	
+}
+
+.list-Contents {
+	display: flex;
+	flex-direction: column;
+}
+
+.item-Content {
+	padding: 10px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+.item-Content:hover {
+	background-color: var(--hover-Colour);
+}
+
+.content-Header {
+	color: var(--default-Black);
+	font-size: 16px;
+}
+
+.content-Category {
+	display: inline-block;
+	color: var(--summary-Colour);
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.content-Summary {
+	color: var(--summary-Colour);
+	font-size: 14px;
+	line-height: 20px;
+}

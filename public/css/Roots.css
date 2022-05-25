@@ -1,0 +1,17 @@
+:root {
+    --default-Font: 'Source Sans Pro';
+    --additional-Font: 'Noto Sans';
+
+    /* Colours */
+    --default-White: #FFFFFF;
+    --default-Black: #000000;
+
+    --default-Colour: #FF7979;
+    --secondary-Colour: #EB4D4D;
+
+    --control-Colour: #E7EDF3;
+    --label-Colour: #667D99;
+	
+	--hover-Colour: #F3F6F9;
+	--summary-Colour: #AAAAAA;
+}

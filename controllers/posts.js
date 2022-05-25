@@ -67,6 +67,7 @@ exports.getShowPost = (req, res) => {
     });
 };
 
+
 exports.postAddNewPost = async (req, res) => {
   console.log(req.body);
   let allowComments = false;
