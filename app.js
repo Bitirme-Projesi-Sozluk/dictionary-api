@@ -26,17 +26,13 @@ mongoose.connect(mongodb_uri, {
 
 mongoose.set('useFindAndModify', false);
 
-
 // import routes
 const index = require('./routes/posts');
 const posts = require('./routes/posts');
 const admin = require('./routes/admin');
-
 const app = express();
 
-// Static files
 app.use(express.static(__dirname + '/public'));
-app.use('/images', express.static(__dirname + '/images'));
 
 // View Engine
 app.engine('.hbs', exphbs({
@@ -75,11 +71,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Global vars
-app.use((req, res, next) => {
-  res.locals.user = req.user || null;
-  next();
-});
 
 // log req method and path
 app.use((req, res, next) => {
