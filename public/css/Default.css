@@ -5,7 +5,8 @@
 #page-Body {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: fixed;
+	overflow: auto;
     background-color: var(--body-Colour);
 }
 
@@ -24,6 +25,11 @@
 
 .direction-Row {
 	flex-direction: column;
+}
+
+.center-Items {
+	justify-content: center;
+	align-content: center;
 }
 
 .page-Headline {
@@ -227,4 +233,27 @@
 	color: var(--summary-Colour);
 	font-size: 12px;
 	line-height: 20px;
+}
+
+.login-Form {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-Form > * {
+	width: 300px;
+	font-size: 14px;
+}
+
+.login-Form > input {
+	margin-bottom: 5px;
+}
+
+.login-Form > button {
+	color: var(--label-Colour);
+	cursor: pointer;
+}
+
+.login-Form > button:hover {
+	color: var(--text-Colour);
 }
