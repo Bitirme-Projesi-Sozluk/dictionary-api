@@ -22,13 +22,9 @@
 </head>
 
 <body>
-
+    <div id='page-Body'>
   {{>_header}}
-  <section id="section_main">
-    <div class="container">
-      {{{body}}}
-    </div>
-  </section>
+  {{{body}}}
   {{>_footer}}
 
   {{!-- bootstrap dependencies --}}
@@ -44,6 +40,7 @@
   <script
     src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=5c5dggjgn41gslpp0ozsgeklrxj7tmy99h3tfvzffuvxv868"></script>
   <script src="/js/admin.js"></script>
+    </div>
 </body>
 
 </html>

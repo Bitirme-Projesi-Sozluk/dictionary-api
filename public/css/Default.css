@@ -2,15 +2,15 @@
 @import url('Fonts.css');
 @import url('Roots.css');
 
-.page-Body {
+#page-Body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: var(--default-White);
-    overflow: hidden;
+    background-color: var(--body-Colour);
 }
 
 .page-Header {
+	background-color: var(--header-Colour);
 	border-bottom: 2px solid var(--control-Colour);
 	font-family: var(--additional-Font);
 	font-size: 15px;
@@ -20,6 +20,10 @@
     display: flex;
     width: 1040px;
     margin: 0 auto;
+}
+
+.direction-Row {
+	flex-direction: column;
 }
 
 .page-Headline {
@@ -87,7 +91,7 @@
 
 .search-Bar:focus {
     width: 100%;
-    background-color: var(--default-White);
+    background-color: transparent;
     color: var(--default-Black);
     border-color: var(--secondary-Colour);
 }
@@ -208,7 +212,7 @@
 }
 
 .content-Header {
-	color: var(--default-Black);
+	color: var(--heading-Colour);
 	font-size: 16px;
 }
 
@@ -221,6 +225,6 @@
 
 .content-Summary {
 	color: var(--summary-Colour);
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 20px;
 }

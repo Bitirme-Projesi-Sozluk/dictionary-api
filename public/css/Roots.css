@@ -3,6 +3,10 @@
     --additional-Font: 'Noto Sans';
 
     /* Colours */
+    --body-Colour: '#FFFFFF';
+    /* */ --header-Colour: #FFF;
+    /* */ --heading-Colour: #111;
+
     --default-White: #FFFFFF;
     --default-Black: #000000;
 
@@ -14,4 +18,22 @@
 	
 	--hover-Colour: #F3F6F9;
 	--summary-Colour: #AAAAAA;
+}
+
+.dark-Colours {
+    --body-Colour: #14191F;
+    /* */ --header-Colour: #14191F;
+    /* */ --heading-Colour: #DDD;
+
+    --default-White: #FFFFFF;
+    --default-Black: #000000;
+
+    --default-Colour: #FF7979;
+    --secondary-Colour: #EB4D4D;
+
+    --control-Colour: #1B2028;
+    --label-Colour: #667D99;
+	
+	--hover-Colour: #F3F6F9;
+	--summary-Colour: #5C6570;
 }
