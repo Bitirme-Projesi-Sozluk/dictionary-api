@@ -23,9 +23,7 @@
                         d="M9,20V18.1L15.1,12H18a2,2,0,0,1,2,2v4a2,2,0,0,1-2,2Zm0-3.3V5.3l2.1-2a1.9,1.9,0,0,1,2.8,0h0l2.8,2.8a1.9,1.9,0,0,1,0,2.8ZM0,2A2,2,0,0,1,2,0H6A2,2,0,0,1,8,2V18a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2V2ZM4,17a1,1,0,0,0,0-2,1,1,0,0,0,0,2Z" />
                 </svg>
                 <script>
-                    document.getElementById('revert-Theme').addEventListener('click', () => {
-                        document.getElementById('page-Body').classList.toggle('dark-Colours');
-                    });
+                    localStorage.getItem('d-T')=='1'?document.documentElement.classList.add('d-T'):document.documentElement.classList.remove('d-T');document.getElementById('revert-Theme').addEventListener('click',()=>{ document.documentElement.classList.toggle('d-T'); !localStorage.getItem('d-T')||localStorage.getItem('d-T')=='0'?localStorage.setItem('d-T','1'):localStorage.setItem('d-T','0'); });
                 </script>
             </a>
             {{#if user}}

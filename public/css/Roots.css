@@ -4,8 +4,8 @@
 
     /* Colours */
     --body-Colour: '#FFFFFF';
-    /* */ --header-Colour: #FFF;
-    /* */ --heading-Colour: #111;
+    --header-Colour: #FFF;
+    --heading-Colour: #111;
 
     --default-White: #FFFFFF;
     --default-Black: #000000;
@@ -15,15 +15,16 @@
 
     --control-Colour: #E7EDF3;
     --label-Colour: #667D99;
+    --text-Colour: #111;
 	
 	--hover-Colour: #F3F6F9;
 	--summary-Colour: #AAAAAA;
 }
 
-.dark-Colours {
+.d-T {
     --body-Colour: #14191F;
-    /* */ --header-Colour: #14191F;
-    /* */ --heading-Colour: #DDD;
+    --header-Colour: #14191F;
+    --heading-Colour: #DDD;
 
     --default-White: #FFFFFF;
     --default-Black: #000000;
@@ -33,7 +34,8 @@
 
     --control-Colour: #1B2028;
     --label-Colour: #667D99;
+    --text-Colour: #FFF;
 	
-	--hover-Colour: #F3F6F9;
+	--hover-Colour: #171D23;
 	--summary-Colour: #5C6570;
 }
