@@ -34,7 +34,7 @@ router.put('/:id', ensureAuthenticated, upload.single('header_img'), postControl
 router.delete('/:id', ensureAuthenticated, postController.deleteSinglePost);
 
 
-router.get('/universite', postController.getTest);
+
 router.get('/myo', postController.getMYO);
 router.get('/fakulte', postController.getFakulte);
 router.get('/konservatuvar',postController.getKonservatuvar);

@@ -216,23 +216,7 @@ exports.getKonservatuvar = (req, res) => {
       res.status(404).send();
     })
 };
-exports.getTest = (req, res) => {
-  Post.find({
-    status: 'published',
-    category: 'test'
-  })
-    .sort('-date')
-    .lean()
-    .then((posts) => {
-      res.render('post/universite', {
-        'posts': posts
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(404).send();
-    })
-};
+
 
 exports.deleteSinglePost = (req, res) => {
   const postId = req.params.id;
