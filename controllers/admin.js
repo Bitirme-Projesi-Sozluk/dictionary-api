@@ -72,7 +72,3 @@ exports.getAdminPosts = (req, res) => {
       console.log(`Error: ${err}`);
     })
 };
-
-exports.getAdminPages = (req, res) => {
-  res.render('admin/pages');
-};

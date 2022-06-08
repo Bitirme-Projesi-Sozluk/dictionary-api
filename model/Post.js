@@ -32,10 +32,6 @@ const postSchema = new Schema({
             type: String,
             required: true
         },
-        createdAt: {
-            type: String,
-            default: Date.now
-        },
         commentUser: {
             name: {
                 type: String,

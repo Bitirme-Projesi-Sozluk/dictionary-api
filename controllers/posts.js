@@ -127,31 +127,13 @@ exports.putUpdatePost = async (req, res) => {
       post.status = updatedstatus;
       post.allowComments = allowComments;
 
-      if (image) {
-        cloudinaryUpload(image)
-          .then((result) => {
-            console.log(result);
-            imageUrl = uploadResult.secure_url ? uploadResult.secure_url : '';
-            post.images.imageUrl = imageUrl;
-          })
-          .catch(err => {
-            console.log(err);
-          })
-          .finally(() => {
-            return post.save()
-              .then(data => {
-                console.log('Post Updated Sucessfully');
-                res.redirect('/admin/posts');
-              })
-          });
-      } else {
-        return post.save()
-          .then(result => {
-            console.log('Post Updated Sucessfully');
-            res.redirect('/admin/posts');
-          })
-      }
-    })
+      return post.save()
+        .then(result => {
+          console.log('Post Updated Sucessfully');
+          res.redirect('/admin/posts');
+        })
+    }
+    )
     .catch(err => {
       console.log(`Error : ${err}`);
       res.redirect('/');
@@ -216,10 +198,6 @@ exports.getKonservatuvar = (req, res) => {
       res.status(404).send();
     })
 };
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
 exports.deleteSinglePost = (req, res) => {
   const postId = req.params.id;
