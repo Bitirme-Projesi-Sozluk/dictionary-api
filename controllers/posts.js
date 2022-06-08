@@ -70,10 +70,6 @@ exports.getShowPost = (req, res) => {
 
 exports.postAddNewPost = async (req, res) => {
   console.log(req.body);
-  let allowComments = false;
-  if (req.body.allowComments == 'on') {
-    allowComments = true;
-  }
   const image = req.file;
   let imageUrl;
   try {
@@ -90,8 +86,7 @@ exports.postAddNewPost = async (req, res) => {
     'title': req.body.title,
     'body': req.body.body,
     'category': req.body.category ? req.body.category.toLowerCase() : 'ALL',
-    'status': req.body.status,
-    'allowComments': allowComments
+    'status': req.body.status
   });
 
   post
@@ -113,11 +108,7 @@ exports.putUpdatePost = async (req, res) => {
   const updatedcategory = req.body.category;
   const updatedstatus = req.body.status;
   const image = req.file;
-  let allowComments = false;
 
-  if (req.body.allowComments == 'on') {
-    allowComments = true;
-  }
 
   Post.findById(postId)
     .then(async post => {
@@ -125,7 +116,6 @@ exports.putUpdatePost = async (req, res) => {
       post.body = updatedbody;
       post.category = updatedcategory;
       post.status = updatedstatus;
-      post.allowComments = allowComments;
 
       return post.save()
         .then(result => {
@@ -226,8 +216,7 @@ exports.postComment = (req, res) => {
     }
   }
   Post.findOneAndUpdate({
-    _id: req.params.id,
-    allowComments: true
+    _id: req.params.id
   }, {
     $push: {
       comments: {
