@@ -34,10 +34,13 @@ router.put('/:id', ensureAuthenticated, upload.single('header_img'), postControl
 router.delete('/:id', ensureAuthenticated, postController.deleteSinglePost);
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 router.get('/myo', postController.getMYO);
 router.get('/fakulte', postController.getFakulte);
-router.get('/konservatuvar',postController.getKonservatuvar);
+router.get('/konservatuvar', postController.getKonservatuvar);
 
 router.post('/comment/:id', postController.postComment);
 

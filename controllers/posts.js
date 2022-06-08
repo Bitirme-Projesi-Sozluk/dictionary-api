@@ -216,7 +216,10 @@ exports.getKonservatuvar = (req, res) => {
       res.status(404).send();
     })
 };
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 exports.deleteSinglePost = (req, res) => {
   const postId = req.params.id;
@@ -260,7 +263,7 @@ exports.postComment = (req, res) => {
     })
     .catch((err) => {
       console.log(`Error: ${err.message}`);
-      res.status(500).send();
+      res.status(404).send();
     });
 };
 
