@@ -69,19 +69,7 @@ exports.getShowPost = (req, res) => {
 
 
 exports.postAddNewPost = async (req, res) => {
-  console.log(req.body);
-  const image = req.file;
-  let imageUrl;
-  try {
-
-    const uploadResult = await cloudinaryUpload(image);
-    console.log(uploadResult);
-    imageUrl = uploadResult.secure_url ? uploadResult.secure_url : '';
-  } catch (err) {
-    console.log(err);
-    res.status(500).redirect('/admin');
-  }
-
+ 
   const post = new Post({
     'title': req.body.title,
     'body': req.body.body,
