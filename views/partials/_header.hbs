@@ -14,10 +14,10 @@
             <a href='/fakulte' class='item-Links'>Fakülte</a>
         </div>
         <div class='page-Controls'>
-            <div class='search-Form'>
-                <input type='text' class='search-Bar' placeholder='Arama'>
+            <div class='tom-Hanks' id='search-Form'>
+                <input type='text' id='search-Bar' placeholder='Arama'>
             </div>
-            <a href='#' id='revert-Theme' class='button-Control'>
+            <button type='button' id='revert-Theme' class='button-Control'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class='icon-Control'>
                     <path
                         d="M9,20V18.1L15.1,12H18a2,2,0,0,1,2,2v4a2,2,0,0,1-2,2Zm0-3.3V5.3l2.1-2a1.9,1.9,0,0,1,2.8,0h0l2.8,2.8a1.9,1.9,0,0,1,0,2.8ZM0,2A2,2,0,0,1,2,0H6A2,2,0,0,1,8,2V18a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2V2ZM4,17a1,1,0,0,0,0-2,1,1,0,0,0,0,2Z" />
@@ -26,7 +26,7 @@
                     localStorage.getItem('d-T')=='1'?document.documentElement.classList.add('d-T'):document.documentElement.classList.remove('d-T');document.getElementById('revert-Theme').addEventListener('click',()=>{document.documentElement.classList.toggle('d-T');!localStorage.getItem('d-T')||localStorage.getItem('d-T')=='0'?localStorage.setItem('d-T','1'):localStorage.setItem('d-T','0');});
                 </script>
             </a>
-            {{#if user}}
+            {{!-- {{#if user}}
             <a href='/admin' class='button-Control'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" class='icon-Control'>
                     <path
@@ -39,7 +39,7 @@
                         d="M10,11.8a1.3,1.3,0,0,1-1.3-1.2V1.2A1.2,1.2,0,0,1,10,0a1.2,1.2,0,0,1,1.3,1.2v9.4A1.3,1.3,0,0,1,10,11.8ZM10,20C4.5,20,0,15.8,0,10.6A9.1,9.1,0,0,1,4.3,2.9,1.2,1.2,0,0,1,6,3.1a1,1,0,0,1-.2,1.6H5.7a6.8,6.8,0,0,0-1.9,9.8,7.9,7.9,0,0,0,10.5,1.8,6.8,6.8,0,0,0,1.9-9.8,8.1,8.1,0,0,0-1.9-1.8,1.1,1.1,0,0,1-.2-1.7,1.4,1.4,0,0,1,1.6-.2A9,9,0,0,1,18.2,16,10.2,10.2,0,0,1,10,20Z" />
                 </svg>
             </a>
-            {{/if}}
+            {{/if}} --}}
         </div>
     </div>
 </div>

@@ -27,11 +27,6 @@
 	flex-direction: column;
 }
 
-.center-Items {
-	justify-content: center;
-	align-content: center;
-}
-
 .page-Headline {
     margin-right: 20px;
 }
@@ -75,15 +70,15 @@
 	margin: 10px 0;
 }
 
-.search-Form {
+#search-Form {
 	margin-right: 5px;
 	flex-grow: 1;
 }
 
-.search-Bar {
-	box-sizing: border-box;
-    width: 150px;
-    padding: 11.3px;
+.tom-Hanks * {
+    box-sizing: border-box;
+    padding: 12px;
+    height: 45px;
     background-color: var(--control-Colour);
     color: var(--label-Colour);
     font-size: 14px;
@@ -92,10 +87,14 @@
     border: 2px solid transparent;
     border-radius: 10px;
     outline: none;
+}
+
+#search-Bar {
+    width: 150px;
 	float: right;
 }
 
-.search-Bar:focus {
+#search-Bar:focus {
     width: 100%;
     background-color: transparent;
     color: var(--text-Colour);
@@ -202,11 +201,6 @@
 	
 }
 
-.list-Contents {
-	display: flex;
-	flex-direction: column;
-}
-
 .item-Content {
 	padding: 10px;
 	border-radius: 10px;
@@ -236,25 +230,7 @@
 	line-height: 20px;
 }
 
-.login-Form {
-	display: flex;
-	flex-direction: column;
-}
-
-.login-Form > * {
-	width: 300px;
-	font-size: 14px;
-}
-
-.login-Form > input {
-	margin-bottom: 5px;
-}
-
-.login-Form > button {
-	color: var(--label-Colour);
-	cursor: pointer;
-}
-
-.login-Form > button:hover {
-	color: var(--text-Colour);
+.morgan-Freeman {
+    display: flex;
+    flex-direction: column;
 }

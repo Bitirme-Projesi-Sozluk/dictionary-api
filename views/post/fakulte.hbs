@@ -1,9 +1,9 @@
 <div class='page-Content'>
   <div class='element-Container'>
     <div class='page-Categories'>
-      <div class='actions-Buttons'>
+      {{!-- <div class='actions-Buttons'>
         <a href='/' class='link-Button'>Massa vitae tortor</a>
-      </div>
+      </div> --}}
       <div class='list-Categories'>
         <a href='/konservatuvar' class='item-Categories'>
           <img src='/img/Begonia.png' class='icon-Categories'>
@@ -25,7 +25,6 @@
 
       <div class='list-Contents'>
         {{#each posts}}
-        <!-- A sadece baslikta olacak -->
         <a href="/posts/show/{{_id}}" class='item-Content'>
           <h3 class='content-Header'>{{title}}</h3>
           <span class='content-Category'>{{category}}</span>
