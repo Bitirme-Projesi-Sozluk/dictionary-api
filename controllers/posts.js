@@ -22,7 +22,7 @@ exports.getIndex = (req, res, next) => {
 
 
 exports.getAddPost = (req, res) => {
-  res.render('post/add');
+  res.render('post/add', { layout: "adminMain" });
 };
 
 exports.getEditPost = (req, res) => {
@@ -30,7 +30,7 @@ exports.getEditPost = (req, res) => {
     .then((data) => {
       const post = data.toObject();
       res.render('post/edit', {
-        post
+        post, layout: "adminMain"
       });
     })
     .catch((err) => {

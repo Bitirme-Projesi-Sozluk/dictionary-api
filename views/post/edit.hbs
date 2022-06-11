@@ -1,44 +1,44 @@
 <div class='page-Content'>
-    <div class='element-Container direction-Row'>
+  <div class='element-Container direction-Row'>
 
-<h1 class="py-3">Edit Post</h1>
-<div class="row">
-  <div class="col-sm-12 mb-5">
-    <form action="/posts/{{post._id}}?_method=PUT" method="POST" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="title">Başlık</label>
-        <input class="form-control" id="title" type="text" name="title" value="{{post.title}}"
-          placeholder=" Title of the Post" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="title">Kategori</label>
-        <input class="form-control" id="category" type="text" name="category" value="{{post.category}}"
-          placeholder="Category of the Post" required>
-      </div>
-      <div class="form-group">
-        <label for="status">Status</label>
-        <select class="form-control" id="status" name="status">
-          {{#select post.status}}
-          <option value="published">yayında</option>
-          <option value="unpublished">yayında değil</option>
-          {{/select}}
-        </select>
-      </div>
-      <div class="form-group form-check">
-        <input class="form-check-input" name="allowComments" type="checkbox" {{#if post.allowComments}} Seçildi {{/if}}
-          id="checkbox">
-        <label class="form-check-label" for="checkbox">Yoruma izin ver</label>
-      </div>
-      <div class="form-group">
-        <label for="post-body">İçerik </label>
-        <textarea class="input-group" id="post-body" name="body" rows="25"
-          placeholder="Sayfanın içerik yazısı">{{post.body}}</textarea>
-      </div>
-      <input class="form-control btn btn-dark" type="submit" value="Post">
-    </form>
-  </div>
-</div>
+    <h1 class="py-3">Edit Post</h1>
+    <div class="row">
+      <div class="col-sm-12 mb-5">
+        <form action="/posts/{{post._id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="title">Başlık</label>
+            <input class="form-control" id="title" type="text" name="title" value="{{post.title}}"
+              placeholder=" Title of the Post" required>
+          </div>
 
+          <div class="form-group">
+            <label for="title">Kategori</label>
+            <input class="form-control" id="category" type="text" name="category" value="{{post.category}}"
+              placeholder="Category of the Post" required>
+          </div>
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select class="form-control" id="status" name="status">
+              {{#select post.status}}
+              <option value="published">yayında</option>
+              <option value="unpublished">yayında değil</option>
+              {{/select}}
+            </select>
+          </div>
+          <div class="form-group form-check">
+            <input class="form-check-input" name="allowComments" type="checkbox" {{#if post.allowComments}} Seçildi
+              {{/if}} id="checkbox">
+            <label class="form-check-label" for="checkbox">Yoruma izin ver</label>
+          </div>
+          <div class="form-group">
+            <label for="post-body">İçerik </label>
+            <textarea class="input-group" id="post-body" name="body" rows="25"
+              placeholder="Sayfanın içerik yazısı">{{post.body}}</textarea>
+          </div>
+          <input class="form-control btn btn-dark" type="submit" value="Post">
+        </form>
+      </div>
     </div>
+
+  </div>
 </div>
