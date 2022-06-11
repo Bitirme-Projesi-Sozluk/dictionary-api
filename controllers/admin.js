@@ -12,7 +12,7 @@ const Admin = mongoose.model('admin');
 
 
 exports.getLogIn = (req, res) => {
-  res.render('admin/login');
+  res.render('admin/login', { layout: "adminMain" });
 };
 
 exports.postLogin = (req, res, next) => {
@@ -29,7 +29,7 @@ exports.getLogout = (req, res) => {
 };
 
 exports.getSignUp = (req, res) => {
-  res.render('admin/signup');
+  res.render('admin/signup', { layout: "adminMain" });
 };
 
 exports.postSignUp = (req, res) => {
@@ -65,7 +65,7 @@ exports.getAdminPosts = (req, res) => {
     .lean()
     .then((posts) => {
       res.render('admin/posts', {
-        posts
+        posts, layout: "adminMain"
       });
     })
     .catch((err) => {

@@ -45,7 +45,7 @@ exports.getDeletePost = (req, res) => {
       // handlebars issue
       const post = data.toObject();
       res.render('post/delete', {
-        post
+        post, layout: "adminMain"
       });
     })
     .catch((err) => {
@@ -69,7 +69,7 @@ exports.getShowPost = (req, res) => {
 
 
 exports.postAddNewPost = async (req, res) => {
- 
+
   const post = new Post({
     'title': req.body.title,
     'body': req.body.body,
