@@ -25,7 +25,7 @@
                 <script>
                     localStorage.getItem('d-T')=='1'?document.documentElement.classList.add('d-T'):document.documentElement.classList.remove('d-T');document.getElementById('revert-Theme').addEventListener('click',()=>{document.documentElement.classList.toggle('d-T');!localStorage.getItem('d-T')||localStorage.getItem('d-T')=='0'?localStorage.setItem('d-T','1'):localStorage.setItem('d-T','0');});
                 </script>
-            </a>
+            </button>
             {{!-- {{#if user}}
             <a href='/admin' class='button-Control'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" class='icon-Control'>

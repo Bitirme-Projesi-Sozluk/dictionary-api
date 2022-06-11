@@ -89,6 +89,17 @@
     outline: none;
 }
 
+.tom-Hanks *:focus:not(button) {
+    color: var(--text-Colour);
+    border-color: var(--secondary-Colour);
+    background-color: transparent;
+}
+
+.tom-Hanks button:hover {
+    background-color: var(--secondary-Colour);
+    color: var(--text-Colour);
+}
+
 #search-Bar {
     width: 150px;
 	float: right;
@@ -96,9 +107,6 @@
 
 #search-Bar:focus {
     width: 100%;
-    background-color: transparent;
-    color: var(--text-Colour);
-    border-color: var(--secondary-Colour);
 }
 
 .button-Control {
