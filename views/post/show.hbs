@@ -1,75 +1,82 @@
 <div class='page-Content'>
     <div class='element-Container direction-Row'>
-{{!-- <div class="post_header-img" style="background-image: url('{{post.images.imageUrl}}');">
-  <div class="post_header-content text-center">
-    <div class="post_header-content">
-      <a href="/posts/?category={{post.category}}">{{post.category}}</a>
-      <h1 class="py-4 px-2 post_header-text">{{post.title}}</h1>
-    </div>
-  </div>
-</div>
-<div class="post_spacer"></div> --}}
-<div class="my-3 my-sm-4">
-  <div class="post_body">{{{post.body}}}</div>
-  <p><small class="text-muted">Son Güncelleme &nbsp;{{getDate post.date}}</small></p>
-</div>
-
-<!-- comment -->
-<div class="row">
-    <style>
-        .col-md-10 {
-            max-width: 100%; 
-            flex: 1;
-        }
-
-        .morgan-Freeman *:not(button) {
-            margin-bottom: 5px;
-        }
-
-        .tom-Hanks textarea {
-            height: 150px;
-            line-height: 20px;
-            resize: none;
-        }
-    </style>
-  <div class="col-md-10">
-    <div id="post-comments">
-
-      <div id="add-comment" class="bg-white p-4 border">
-          <form action="/posts/comment/{{post._id}}" method="POST" class='tom-Hanks morgan-Freeman'>
-            <input type='text' name='name' placeholder='İsim' required>
-            <input type='text' name='email' placeholder='Eposta' required>
-            <textarea name='commentBody' placeholder='Yorum' required></textarea>
-            <button type='submit'>Gönder</button>
-          </form>
-      </div>
-      <div class="py-3" id="show-comments">
-        {{#each post.comments}}
-        <div class="comments_item">
-          <div class="card card-body my-3 d-flex flex-row">
-            <div class="comment_user-img">
-              <img class="rounded-circle" src="/img/user.png" alt="user">
+        {{!-- <div class="post_header-img" style="background-image: url('{{post.images.imageUrl}}');">
+            <div class="post_header-content text-center">
+                <div class="post_header-content">
+                    <a href="/posts/?category={{post.category}}">{{post.category}}</a>
+                    <h1 class="py-4 px-2 post_header-text">{{post.title}}</h1>
+                </div>
             </div>
-            <div class="ml-4">
-              <div class="comment_user-name">
-                <p>{{commentUser.name}}</p>
-              </div>
-              <div class="comment_body pt-2">
-                <p>{{{commentBody}}}</p>
-                <small class="text-muted">{{getDate createdAt}}</small>
-              </div>
-            </div>
-          </div>
-          {{#if ../user}}
-          <form action="/posts/comment/{{../post._id}}?c_id={{_id}}&_method=DELETE" method="POST">
-            <button class="comment_delete" type="submit"><i class="fa fa-trash"></i></button>
-          </form>
-          {{/if}}
         </div>
-        {{/each}}
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post_spacer"></div> --}}
+        <div class="my-3 my-sm-4">
+            <div class="post_body">{{{post.body}}}</div>
+            <style>
+                .harrison-Ford {
+                    margin: 5px 0;
+                }
+            </style>
+            <p><small class='harrison-Ford'>Son Güncelleme &nbsp;{{getDate post.date}}</small></p>
+        </div>
+        <!-- comment -->
+        <div class="row">
+            <style>
+                .col-md-10 {
+                    max-width: 100%;
+                    flex: 1;
+                }
+
+                .keanu-Reeves {
+                    padding: 15px;
+                    border: 2px solid var(--control-Colour);
+                    border-radius: 6px;
+                    margin-bottom: 20px;
+                }
+
+                .morgan-Freeman *:not(button) {
+                    margin-bottom: 5px;
+                }
+
+                .tom-Hanks textarea {
+                    height: 150px;
+                    line-height: 20px;
+                    resize: none;
+                }
+
+                #form-Body {
+                    padding: 15px;
+                    border: 2px solid var(--control-Colour);
+                    border-radius: 6px;
+                    margin-bottom: 10px;
+                }
+
+                #comments-Title {
+                    font-size: 16px;
+                    color: var(--text-Colour);
+                    font-family: var(--additional-Font);
+                }
+            </style>
+            <div class="col-md-10">
+                <div id="post-comments">
+                    <div id='form-Body'>
+                        <form action="/posts/comment/{{post._id}}" method="POST" class='tom-Hanks morgan-Freeman'>
+                            <input type='text' name='name' placeholder='İsmin' required>
+                            <input type='text' name='email' placeholder='Eposta adresin' required>
+                            <textarea name='commentBody' placeholder='Yorumun' required></textarea>
+                            <button type='submit'>Gönder gitsin</button>
+                        </form>
+                    </div>
+                    <div class='morgan-Freeman'>
+                        {{#each post.comments}}
+                        <a href="/posts/show/{{_id}}" class='keanu-Reeves'>
+                            <h3 class='content-Header'>{{commentUser.name}}</h3>
+                            <span class='harrison-Ford'>{{getDate createdAt}}</span>
+                            <p class='content-Summary'>{{{commentBody}}}</p>
+                        </a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
