@@ -5,9 +5,7 @@ const Post = mongoose.model('posts');
 
 
 exports.getIndex = (req, res, next) => {
-  Post.find({
-   
-  })
+  Post.find({})
     .sort('-date')
     .lean()
     .then((posts) => {
@@ -19,6 +17,7 @@ exports.getIndex = (req, res, next) => {
       res.status(404);
     })
 };
+
 
 
 exports.getAddPost = (req, res) => {
@@ -148,7 +147,6 @@ exports.getFakulte = (req, res) => {
       res.render('post/fakulte', {
         'posts': posts
       });
-      console.log()
     })
     .catch((err) => {
       console.log(err);

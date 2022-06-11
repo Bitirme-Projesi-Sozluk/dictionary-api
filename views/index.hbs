@@ -17,7 +17,7 @@
         </a>
       </div>
     </div>
-    <div class='main-Content'>
+    <div class='main-Content' id="x">
       <div class='morgan-Freeman'>
         {{#each posts}}
         <a href="/posts/show/{{_id}}" class='item-Content'>
@@ -29,6 +29,38 @@
             iaculis nunc sed. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
         </a>
         {{/each}}
+      </div>
+      <style>
+        .pagination {
+          display: inline-block;
+        }
+
+        .pagination a {
+          color: black;
+          float: left;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+
+        .pagination a.active {
+          background-color: #4CAF50;
+          color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+          background-color: #ddd;
+        }
+      </style>
+      </head>
+      <div class="pagination">
+        <a href="">&laquo;</a>
+        <a id="1">1</a>
+        <a class="active" href="#" id="2">2</a>
+        <a id="3">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
       </div>
     </div>
   </div>
