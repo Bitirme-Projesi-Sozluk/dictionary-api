@@ -50,7 +50,7 @@ exports.getAdminDashboard = (req, res) => {
     .lean()
     .then((posts) => {
       res.render('admin/dashboard', {
-        posts
+        posts, layout: "adminMain"
       });
     })
     .catch((err) => {
