@@ -6,7 +6,7 @@ const Post = mongoose.model('posts');
 
 exports.getIndex = (req, res, next) => {
   Post.find({
-    status: 'published'
+   
   })
     .sort('-date')
     .lean()
@@ -122,7 +122,6 @@ exports.putUpdatePost = async (req, res) => {
 
 exports.getMYO = (req, res) => {
   Post.find({
-    status: 'published',
     category: 'MYO'
   })
     .sort('-date')
@@ -141,7 +140,6 @@ exports.getMYO = (req, res) => {
 
 exports.getFakulte = (req, res) => {
   Post.find({
-    status: 'published',
     category: 'Fakulte'
   })
     .sort('-date')
@@ -160,7 +158,6 @@ exports.getFakulte = (req, res) => {
 
 exports.getKonservatuvar = (req, res) => {
   Post.find({
-    status: 'published',
     category: 'Konservatuvar'
   })
     .sort('-date')
