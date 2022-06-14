@@ -1,66 +1,76 @@
 <div class='page-Content'>
-  <div class='element-Container'>
-    <div class='page-Categories'>
-      <div class='list-Categories'>
-        <a href='/konservatuvar' class='item-Categories'>
-          <img src='/img/Begonia.png' class='icon-Categories'>
-          <span class='label-Categories'>Konservatuvar</span>
-        </a>
-        <a href='/fakulte' class='item-Categories'>
-          <img src='/img/Cherry-Blossom.png' class='icon-Categories'>
-          <span class='label-Categories'>Fakülte</span>
-        </a>
+    <div class='element-Container'>
+        <div class='page-Categories'>
+            <div class='list-Categories'>
+                <a href='/konservatuvar' class='item-Categories'>
+                    <img src='/img/Begonia.png' class='icon-Categories'>
+                    <span class='label-Categories'>Konservatuvar</span>
+                </a>
+                <a href='/fakulte' class='item-Categories'>
+                    <img src='/img/Cherry-Blossom.png' class='icon-Categories'>
+                    <span class='label-Categories'>Fakülte</span>
+                </a>
 
-        <a href='/myo' class='item-Categories'>
-          <img src='/img/Coriander.png' class='icon-Categories'>
-          <span class='label-Categories'>Meslek Yüksekokulu</span>
-        </a>
-      </div>
+                <a href='/myo' class='item-Categories'>
+                    <img src='/img/Coriander.png' class='icon-Categories'>
+                    <span class='label-Categories'>Meslek Yüksekokulu</span>
+                </a>
+            </div>
+        </div>
+        <div class='main-Content' id="x">
+            <div class='morgan-Freeman'>
+                {{#each posts}}
+                <a href="/posts/show/{{_id}}" class='keanu-Reeves'>
+                    <h3 class='content-Header'>{{title}}</h3>
+                    <span class='harrison-Ford'>{{category}}</span>
+                    <p class='content-Summary'>Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
+                        pellentesque. Ultricies integer quis auctor elit sed vulputate mi. Odio tempor orci dapibus
+                        ultrices in
+                        iaculis nunc sed. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
+                </a>
+                {{/each}}
+            </div>
+            <style>
+                .pagination {
+                    display: flex;
+                    justify-content: center;
+                    margin: 10px 0;
+                }
+
+                .pagination a {
+                    display: block;
+                    color: var(--text-Colour);
+                    text-decoration: none;
+                    padding: 8px 10px;
+                    border: 2px solid var(--control-Colour);
+                    border-radius: 6px;
+                    font-size: 14px;
+                    color: var(--label-Colour);
+                }
+
+                .pagination a:not(:last-child) {
+                    margin-right: 5px;
+                }
+
+                .pagination a.active {
+                    background-color: var(--secondary-Colour);
+                    color: var(--text-Colour);
+                }
+
+                .pagination a:hover:not(.active) {
+                    background-color: #ddd;
+                }
+            </style>
+            </head>
+            <div class="pagination">
+                <a href="">&laquo;</a>
+                <a href='' id="1">1</a>
+                <a class="active" href="#" id="2">2</a>
+                <a href='#' id="3">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
     </div>
-    <div class='main-Content' id="x">
-      <div class='morgan-Freeman'>
-        {{#each posts}}
-        <a href="/posts/show/{{_id}}" class='keanu-Reeves'>
-          <h3 class='content-Header'>{{title}}</h3>
-          <span class='harrison-Ford'>{{category}}</span>
-          <p class='content-Summary'>Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
-            pellentesque. Ultricies integer quis auctor elit sed vulputate mi. Odio tempor orci dapibus
-            ultrices in
-            iaculis nunc sed. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
-        </a>
-        {{/each}}
-      </div>
-      <style>
-        .pagination {
-          display: inline-block;
-        }
-
-        .pagination a {
-          color: black;
-          float: left;
-          padding: 8px 16px;
-          text-decoration: none;
-        }
-
-        .pagination a.active {
-          background-color: #4CAF50;
-          color: white;
-        }
-
-        .pagination a:hover:not(.active) {
-          background-color: #ddd;
-        }
-      </style>
-      </head>
-      <div class="pagination">
-        <a href="">&laquo;</a>
-        <a id="1">1</a>
-        <a class="active" href="#" id="2">2</a>
-        <a id="3">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">6</a>
-        <a href="#">&raquo;</a>
-      </div>
-    </div>
-  </div>
