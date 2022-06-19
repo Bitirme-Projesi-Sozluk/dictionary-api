@@ -20,15 +20,15 @@
         <div class='main-Content' id="x">
             <div class='morgan-Freeman'>
                 {{#each posts}}
-                <a href="/posts/show/{{_id}}" class='keanu-Reeves'>
+                <a href="/posts/show/{{_id}}" class='keanu-Reeves morgan-Freeman'>
                     <h3 class='content-Header'>{{title}}</h3>
                     <span class='harrison-Ford'>{{category}}</span>
-                    <p class='content-Summary'>Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
-                        pellentesque. Ultricies integer quis auctor elit sed vulputate mi. Odio tempor orci dapibus
-                        ultrices in
-                        iaculis nunc sed. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
+                    <p class='content-Summary'>{{about}}</p>
                 </a>
                 {{/each}}
+                <script>
+                    let s =document.querySelectorAll('.content-Summary').forEach((c)=>{c.innerHTML.length>384?c.innerHTML=c.innerHTML.substring(0,384).trim()+"...":c;});
+                </script>
             </div>
             <style>
                 .pagination {

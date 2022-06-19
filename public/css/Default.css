@@ -174,11 +174,6 @@
     background-color: var(--secondary-Colour);
 }
 
-.list-Categories {
-    display: flex;
-    flex-direction: column;
-}
-
 .item-Categories {
     display: block;
     text-decoration: none;
@@ -205,10 +200,9 @@
     flex: 1;
 }
 
-.content-Toolbar {}
+/* .content-Toolbar {} */
 
 .keanu-Reeves {
-    display: block;
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
@@ -219,22 +213,27 @@
 }
 
 .content-Header {
+    display: block;
     color: var(--heading-Colour);
     font-size: 16px;
     font-family: var(--additional-Font) !important;
+    margin-bottom: 5px;
 }
 
 .harrison-Ford {
-    display: inline-block;
     color: var(--summary-Colour);
     font-size: 12px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .content-Summary {
     color: var(--summary-Colour);
     font-size: 12px;
     line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 60px;
 }
 
 .morgan-Freeman {
