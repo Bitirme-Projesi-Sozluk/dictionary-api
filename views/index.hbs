@@ -10,10 +10,13 @@
                     <img src='/img/Cherry-Blossom.png' class='icon-Categories'>
                     <span class='label-Categories'>Fakülte</span>
                 </a>
-
                 <a href='/myo' class='item-Categories'>
                     <img src='/img/Coriander.png' class='icon-Categories'>
                     <span class='label-Categories'>Meslek Yüksekokulu</span>
+                </a>
+                <a href='/noktalar' class='item-Categories'>
+                    <img src='/img/Clematis.png' class='icon-Categories'>
+                    <span class='label-Categories'>Noktalar</span>
                 </a>
             </div>
         </div>
@@ -27,7 +30,7 @@
                 </a>
                 {{/each}}
                 <script>
-                    let s =document.querySelectorAll('.content-Summary').forEach((c)=>{c.innerHTML.length>384?c.innerHTML=c.innerHTML.substring(0,384).trim()+"...":c;});
+                    let s;s=document.querySelectorAll('.content-Summary').forEach((c)=>{c.innerHTML.length>384?c.innerHTML=c.innerHTML.substring(0,384).trim()+"...":c;});
                 </script>
             </div>
             <style>
