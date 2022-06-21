@@ -153,6 +153,22 @@ exports.getFakulte = (req, res) => {
       res.status(404).send();
     })
 };
+exports.getNoktalar = (req, res) => {
+  Post.find({
+    category: 'Noktalar'
+  })
+    .sort('-date')
+    .lean()
+    .then((posts) => {
+      res.render('post/noktalar', {
+        'posts': posts
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(404).send();
+    })
+};
 
 exports.getKonservatuvar = (req, res) => {
   Post.find({

@@ -27,4 +27,5 @@ router.get('/', ensureAuthenticated, adminControllers.getAdminDashboard);
 
 router.get('/posts', ensureAuthenticated, adminControllers.getAdminPosts);
 
+
 module.exports = router;
