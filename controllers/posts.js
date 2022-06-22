@@ -170,6 +170,23 @@ exports.getNoktalar = (req, res) => {
     })
 };
 
+exports.getBirimler = (req, res) => {
+  Post.find({
+    category: 'Birimler'
+  })
+    .sort('-date')
+    .lean()
+    .then((posts) => {
+      res.render('post/birimler', {
+        'posts': posts
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(404).send();
+    })
+};
+
 exports.getKonservatuvar = (req, res) => {
   Post.find({
     category: 'Konservatuvar'

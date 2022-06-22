@@ -37,6 +37,7 @@ router.get('/myo', postController.getMYO);
 router.get('/fakulte', postController.getFakulte);
 router.get('/konservatuvar', postController.getKonservatuvar);
 router.get('/noktalar',postController.getNoktalar);
+router.get('/birimler',postController.getBirimler);
 
 router.post('/comment/:id', postController.postComment);
 
