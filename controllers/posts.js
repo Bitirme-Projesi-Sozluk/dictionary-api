@@ -139,7 +139,7 @@ exports.getMYO = (req, res) => {
 
 exports.getFakulte = (req, res) => {
     Post.find({
-        category: 'Fakulte'
+        category: 'Fakülte'
     })
         .sort('-date')
         .lean()
@@ -225,7 +225,7 @@ exports.getOrtak = (req, res) => {
 
 exports.getCevrimici = (req, res) => {
     Post.find({
-        category: 'Çevrim içi Eğitim'
+        category: 'Online Eğitim'
     })
         .sort('-date')
         .lean()
@@ -242,7 +242,7 @@ exports.getCevrimici = (req, res) => {
 
 exports.getPuanSiralama = (req, res) => {
     Post.find({
-        category: 'Puan ve Siralama'
+        category: 'Puan Ve Sıralama'
     })
         .sort('-date')
         .lean()
@@ -273,6 +273,25 @@ exports.getUlasim = (req, res) => {
             res.status(404).send();
         })
 };
+
+exports.getHemsirelik = (req, res) => {
+    Post.find({
+        category: 'Hemşirelik YüksekOkulu'
+    })
+        .sort('-date')
+        .lean()
+        .then((posts) => {
+            res.render('post/hyo', {
+                'posts': posts
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(404).send();
+        })
+};
+
+//Hemşirelik YüksekOkulu
 
 /* */
 

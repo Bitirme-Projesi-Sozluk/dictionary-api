@@ -47,6 +47,7 @@ router.get('/ortak-bolumler',postController.getOrtak);
 router.get('/cevrim-ici-egitim', postController.getCevrimici);
 router.get('/puan-ve-siralama',postController.getPuanSiralama);
 router.get('/ulasim',postController.getBirimler);
+router.get('/hyo',postController.getHemsirelik);
 
 /* */
 
