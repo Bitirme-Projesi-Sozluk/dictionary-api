@@ -39,6 +39,17 @@ router.get('/konservatuvar', postController.getKonservatuvar);
 router.get('/noktalar',postController.getNoktalar);
 router.get('/birimler',postController.getBirimler);
 
+/* */
+
+router.get('/birimler', postController.getBirimler);
+router.get('/erasmus',postController.getErasmus);
+router.get('/ortak-bolumler',postController.getOrtak);
+router.get('/cevrim-ici-egitim', postController.getCevrimici);
+router.get('/puan-ve-siralama',postController.getPuanSiralama);
+router.get('/ulasim',postController.getBirimler);
+
+/* */
+
 router.post('/comment/:id', postController.postComment);
 
 router.delete('/comment/:id', ensureAuthenticated, postController.deleteComment);

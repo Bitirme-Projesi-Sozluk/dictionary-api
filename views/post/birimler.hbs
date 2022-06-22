@@ -1,47 +1,69 @@
 <div class='page-Content'>
-  <div class='element-Container'>
-    <div class='page-Categories'>
-      {{!-- <div class='actions-Buttons'>
-        <a href='/' class='link-Button'>Massa vitae tortor</a>
-      </div> --}}
-      <div class='list-Categories'>
-        <a href='/konservatuvar' class='item-Categories'>
-          <img src='/img/Begonia.png' class='icon-Categories'>
-          <span class='label-Categories'>Konservatuvar</span>
-        </a>
-        <a href='/fakulte' class='item-Categories'>
-          <img src='/img/Cherry-Blossom.png' class='icon-Categories'>
-          <span class='label-Categories'>Fakülte</span>
-        </a>
-        <a href='/myo' class='item-Categories'>
-          <img src='/img/Coriander.png' class='icon-Categories'>
-          <span class='label-Categories'>Meslek Yüksekokulu</span>
-
-           <a href='/noktalar' class='item-Categories'>
-                    <img src='/img/Coriander.png' class='icon-Categories'>
+    <div class='element-Container'>
+        <div class='page-Categories'>
+            {{!-- <div class='actions-Buttons'>
+                <a href='/' class='link-Button'>Massa vitae tortor</a>
+            </div> --}}
+            <div class='list-Categories'>
+                <a href='/konservatuvar' class='item-Categories'>
+                    <img src='/img/Sidebar/Conservatory.png' class='icon-Categories'>
+                    <span class='label-Categories'>Konservatuvar</span>
+                </a>
+                <a href='/fakulte' class='item-Categories'>
+                    <img src='/img/Sidebar/School.png' class='icon-Categories'>
+                    <span class='label-Categories'>Fakülte</span>
+                </a>
+                <a href='/myo' class='item-Categories'>
+                    <img src='/img/Sidebar/Education.png' class='icon-Categories'>
+                    <span class='label-Categories'>Meslek Yüksekokulu</span>
+                </a>
+                <a href='/hyo' class='item-Categories'>
+                    <img src='/img/Sidebar/Education.png' class='icon-Categories'>
+                    <span class='label-Categories'>Hemşirelik Yüksekokulu</span>
+                </a>
+                <a href='/noktalar' class='item-Categories'>
+                    <img src='/img/Sidebar/Point.png' class='icon-Categories'>
                     <span class='label-Categories'>Noktalar</span>
                 </a>
-
-                 <a href='/birimler' class='item-Categories'>
-                    <img src='/img/Coriander.png' class='icon-Categories'>
+                <a href='/birimler' class='item-Categories'>
+                    <img src='/img/Begonia.png' class='icon-Categories'>
                     <span class='label-Categories'>Birimler</span>
                 </a>
-        </a>
-      </div>
+                <a href='/erasmus' class='item-Categories'>
+                    <img src='/img/Cherry-Blossom.png' class='icon-Categories'>
+                    <span class='label-Categories'>Erasmus</span>
+                </a>
+                <a href='/ortak-bolumler' class='item-Categories'>
+                    <img src='/img/Clematis.png' class='icon-Categories'>
+                    <span class='label-Categories'>Ortak Bölümler</span>
+                </a>
+                <a href='/cevrim-ici-egitim' class='item-Categories'>
+                    <img src='/img/Iris.png' class='icon-Categories'>
+                    <span class='label-Categories'>Çevrim içi Eğitim</span>
+                </a>
+                <a href='/puan-ve-siralama' class='item-Categories'>
+                    <img src='/img/Jade.png' class='icon-Categories'>
+                    <span class='label-Categories'>Puan ve Sıralama</span>
+                </a>
+                <a href='/ulasim' class='item-Categories'>
+                    <img src='/img/Sidebar/Vehicles.png' class='icon-Categories'>
+                    <span class='label-Categories'>Ulaşım</span>
+                </a>
+            </div>
+        </div>
+        <div class='main-Content'>
+            {{!-- <div class='content-Toolbar'></div> --}}
+            <div class='list-Contents'>
+                {{#each posts}}
+                <a href="/posts/show/{{_id}}" class='keanu-Reeves'>
+                    <h3 class='content-Header'>{{title}}</h3>
+                    <span class='harrison-Ford'>{{category}}</span>
+                    <p class='content-Summary'>Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
+                        pellentesque. Ultricies integer quis auctor elit sed vulputate mi. Odio tempor orci dapibus
+                        ultrices in
+                        iaculis nunc sed. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
+                </a>
+                {{/each}}
+            </div>
+        </div>
     </div>
-    <div class='main-Content'>
-      {{!-- <div class='content-Toolbar'></div> --}}
-      <div class='list-Contents'>
-        {{#each posts}}
-        <a href="/posts/show/{{_id}}" class='keanu-Reeves'>
-          <h3 class='content-Header'>{{title}}</h3>
-          <span class='harrison-Ford'>{{category}}</span>
-          <p class='content-Summary'>Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
-            pellentesque. Ultricies integer quis auctor elit sed vulputate mi. Odio tempor orci dapibus
-            ultrices in
-            iaculis nunc sed. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
-        </a>
-        {{/each}}
-      </div>
-    </div>
-  </div>
