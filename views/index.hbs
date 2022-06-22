@@ -3,24 +3,48 @@
         <div class='page-Categories'>
             <div class='list-Categories'>
                 <a href='/konservatuvar' class='item-Categories'>
-                    <img src='/img/Begonia.png' class='icon-Categories'>
+                    <img src='/img/Sidebar/Conservatory.png' class='icon-Categories'>
                     <span class='label-Categories'>Konservatuvar</span>
                 </a>
                 <a href='/fakulte' class='item-Categories'>
-                    <img src='/img/Cherry-Blossom.png' class='icon-Categories'>
+                    <img src='/img/Sidebar/School.png' class='icon-Categories'>
                     <span class='label-Categories'>Fakülte</span>
                 </a>
                 <a href='/myo' class='item-Categories'>
-                    <img src='/img/Coriander.png' class='icon-Categories'>
+                    <img src='/img/Sidebar/Education.png' class='icon-Categories'>
                     <span class='label-Categories'>Meslek Yüksekokulu</span>
                 </a>
+                <a href='/hyo' class='item-Categories'>
+                    <img src='/img/Sidebar/Education.png' class='icon-Categories'>
+                    <span class='label-Categories'>Hemşirelik Yüksekokulu</span>
+                </a>
                 <a href='/noktalar' class='item-Categories'>
-                    <img src='/img/Clematis.png' class='icon-Categories'>
+                    <img src='/img/Sidebar/Point.png' class='icon-Categories'>
                     <span class='label-Categories'>Noktalar</span>
                 </a>
-                 <a href='/birimler' class='item-Categories'>
-                    <img src='/img/Coriander.png' class='icon-Categories'>
+                <a href='/birimler' class='item-Categories'>
+                    <img src='/img/Begonia.png' class='icon-Categories'>
                     <span class='label-Categories'>Birimler</span>
+                </a>
+                <a href='/erasmus' class='item-Categories'>
+                    <img src='/img/Cherry-Blossom.png' class='icon-Categories'>
+                    <span class='label-Categories'>Erasmus</span>
+                </a>
+                <a href='/ortak-bolumler' class='item-Categories'>
+                    <img src='/img/Clematis.png' class='icon-Categories'>
+                    <span class='label-Categories'>Ortak Bölümler</span>
+                </a>
+                <a href='/cevrim-ici-egitim' class='item-Categories'>
+                    <img src='/img/Iris.png' class='icon-Categories'>
+                    <span class='label-Categories'>Çevrim içi Eğitim</span>
+                </a>
+                <a href='/puan-ve-siralama' class='item-Categories'>
+                    <img src='/img/Jade.png' class='icon-Categories'>
+                    <span class='label-Categories'>Puan ve Sıralama</span>
+                </a>
+                <a href='/ulasim' class='item-Categories'>
+                    <img src='/img/Sidebar/Vehicles.png' class='icon-Categories'>
+                    <span class='label-Categories'>Ulaşım</span>
                 </a>
             </div>
         </div>
@@ -33,9 +57,9 @@
                     <p class='content-Summary'>{{about}}</p>
                 </a>
                 {{/each}}
-                <script>
-                    let s;s=document.querySelectorAll('.content-Summary').forEach((c)=>{c.innerHTML.length>384?c.innerHTML=c.innerHTML.substring(0,384).trim()+"...":c;});
-                </script>
+                {{!-- <script>
+                    let s = document.querySelectorAll('.content-Summary').forEach((c) => { c.innerHTML.length > 384 ? c.innerHTML = c.innerHTML.substring(0, 384).trim() + "..." : c; });
+                </script> --}}
             </div>
             <style>
                 .pagination {
