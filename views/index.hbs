@@ -57,9 +57,9 @@
                     <p class='content-Summary'>{{about}}</p>
                 </a>
                 {{/each}}
-                <script>
-                    let s; s = document.querySelectorAll('.content-Summary').forEach((c) => { c.innerHTML.length > 384 ? c.innerHTML = c.innerHTML.substring(0, 384).trim() + "..." : c; });
-                </script>
+                {{!-- <script>
+                    let s = document.querySelectorAll('.content-Summary').forEach((c) => { c.innerHTML.length > 384 ? c.innerHTML = c.innerHTML.substring(0, 384).trim() + "..." : c; });
+                </script> --}}
             </div>
             <style>
                 .pagination {
